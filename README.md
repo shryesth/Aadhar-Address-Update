@@ -1,7 +1,11 @@
-# address
+# Aadhar Address Update
 
-Aadhar Address Update Application
+### Possible Flow
+![Untitled-2021-10-28-1120](https://user-images.githubusercontent.com/53579386/139195526-5bc122f1-8457-497d-b648-3385e4ac9570.png)
 
+### Additional Checks
+- [ ] Audit at every steps. Make logs available
+- [ ] Fraud Protection (Use of VPN, Developer Mode)
 ## Getting Started
 
 This project is a starting point for a Flutter application.
