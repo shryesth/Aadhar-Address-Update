@@ -1,4 +1,5 @@
 import 'package:address/screens/home_screen.dart';
+import 'package:address/screens/location_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      home: const LocationScreen(),
     );
   }
 }

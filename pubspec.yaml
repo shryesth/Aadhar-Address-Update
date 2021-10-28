@@ -36,6 +36,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   permission_handler: ^8.2.5
   flutter_mobile_vision_2: ^0.1.11
+  geolocator: ^7.7.1
+  geocoding: ^2.0.1
 
 dev_dependencies:
   flutter_test:
