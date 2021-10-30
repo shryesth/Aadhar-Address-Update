@@ -1,7 +1,6 @@
 import 'package:address/screens/home_screen.dart';
 import 'package:address/screens/location_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:permission_handler/permission_handler.dart';
 
 void main() {
   runApp(const MyApp());
