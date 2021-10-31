@@ -63,12 +63,20 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: NetworkImage('https://i.pinimg.com/originals/76/05/2e/76052e4c0db271656da0cf58d826543e.jpg'),
+            fit: BoxFit.contain,
+          ),
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){
           getRequiredPermissions();
           Navigator.of(context).push(MaterialPageRoute(builder: (context) => ScanDocScreen()));
         },
+        child: const Icon(Icons.add),
       ),
     );
   }
