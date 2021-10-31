@@ -1,6 +1,5 @@
+import 'package:address/constants.dart';
 import 'package:address/screens/bottom_navigation.dart';
-import 'package:address/screens/home_screen.dart';
-import 'package:address/screens/location_screen.dart';
 import 'package:address/screens/otp_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -17,9 +16,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: kPrimaryRed
       ),
-      home: const BottomNavigation(),
+      home: const OtpScreen(),
     );
   }
 }
