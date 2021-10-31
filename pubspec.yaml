@@ -39,8 +39,9 @@ dependencies:
   geolocator: ^7.7.1
   geocoding: ^2.0.1
   http: ^0.13.4
+  uuid: ^3.0.5
+  xml: ^5.3.1
   shared_preferences:
-  flutter_ip:
 
 dev_dependencies:
   flutter_test:
