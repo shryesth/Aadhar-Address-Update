@@ -1,7 +1,10 @@
 import 'package:address/constants.dart';
 import 'package:address/screens/bottom_navigation.dart';
+import 'package:address/screens/home_screen.dart';
 import 'package:address/screens/otp_screen.dart';
 import 'package:flutter/material.dart';
+import 'screens/addresses_screen.dart';
+import 'screens/scan_doc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: kPrimaryRed
       ),
-      home: const OtpScreen(),
+      home: HomeScreen(),
     );
   }
 }
