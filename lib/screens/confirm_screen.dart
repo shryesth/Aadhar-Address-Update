@@ -86,6 +86,7 @@ class _ConfirmScreenState extends State<ConfirmScreen> {
                     if (_controllerOTP.text.length == 6) {
                       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Confirming OTP..')));
                       await _aadharService.getEKyc(widget.uid, widget.txnId, _controllerOTP.text);
+                      _controllerOTP.clear();
                       Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeScreen()));
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Please enter a valid OTP')));

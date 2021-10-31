@@ -88,6 +88,7 @@ class _OtpScreenState extends State<OtpScreen> {
                       String txnId =  uuid.v4();
                       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Sending OTP..')));
                       await _aadharService.getOTP(uid, txnId);
+                      _controllerAadhar.clear();
                       Navigator.of(context).push(MaterialPageRoute(builder: (context)=> ConfirmScreen(uid: uid, txnId: txnId)));
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Please enter a valid Aadhar number')));
