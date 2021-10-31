@@ -1,3 +1,4 @@
+import 'package:address/screens/bottom_navigation.dart';
 import 'package:address/screens/home_screen.dart';
 import 'package:address/screens/location_screen.dart';
 import 'package:address/screens/otp_screen.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const OtpScreen(),
+      home: const BottomNavigation(),
     );
   }
 }
