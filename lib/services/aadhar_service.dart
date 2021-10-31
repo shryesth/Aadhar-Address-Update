@@ -6,7 +6,6 @@ import 'package:uuid/uuid.dart';
 import 'package:xml/xml.dart';
 
 class AadharService {
-  var uuid = const Uuid();
   var getOtpUrl = Uri.parse('https://stage1.uidai.gov.in/onlineekyc/getOtp/');
   var getEKycUrl = Uri.parse('https://stage1.uidai.gov.in/onlineekyc/getEkyc/');
 
@@ -46,7 +45,7 @@ class AadharService {
     if (response.statusCode == 200) {
       var kycResponse = KYCResponse.fromJson(jsonDecode(response.body));
       final document = XmlDocument.parse(kycResponse.eKycString);
-      print(document.findAllElements('house'));
+      print(document);
     } else {
       throw Exception('Failed to get OTP.');
     }
