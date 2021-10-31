@@ -6,11 +6,10 @@
   (Client refers to individual, who wants to avail Address Update service).
 - The client will receive an OTP on his Registered Mobile Number
 - Sharing the OTP with Operator will allow Operator to access eKYC details of Client.
-- On selecting "Update Address". a window with Camera Accessibilty will open.
+- On selecting "Update Address", a window with Camera Accessibilty will open.
 - Operator will click image of POA (Proof of Address) of the Client.
 - Using OCR the Address will be fectched from the image, and feilds with new Address will be Visible.
-- Feilds will be classified into editable and uneditable as.
-  
+- Feilds will be classified into editable and uneditable as:
   - Uneditable Feilds :
        - VTC (village/town/city)
        - Sub District
@@ -18,7 +17,6 @@
        - State
        - Country
        - Postal Code
-
   - Editable Feilds :
        - Care Of
        - House Identifier
@@ -26,7 +24,6 @@
        - Landmark
        - Locality
        - Post Office Name
-
 - The changes will be saved, at local database (device) along with GPS location (co ordinates) where the changes      were made as log.
 - If the co-ordinates and updated address will match, the app will sync the request wil a sever
 
