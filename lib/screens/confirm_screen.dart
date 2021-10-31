@@ -1,4 +1,5 @@
 import 'package:address/constants.dart';
+import 'package:address/screens/bottom_navigation.dart';
 import 'package:address/screens/home_screen.dart';
 import 'package:address/services/aadhar_service.dart';
 import 'package:flutter/material.dart';
@@ -87,7 +88,7 @@ class _ConfirmScreenState extends State<ConfirmScreen> {
                       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Confirming OTP..')));
                       await _aadharService.getEKyc(widget.uid, widget.txnId, _controllerOTP.text);
                       _controllerOTP.clear();
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeScreen()));
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => BottomNavigation()));
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Please enter a valid OTP')));
                     }

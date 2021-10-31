@@ -1,3 +1,4 @@
+import 'package:address/constants.dart';
 import 'package:address/screens/scan_doc.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -11,7 +12,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   @override
   void initState() {
     // TODO: implement initState
@@ -63,14 +63,45 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(),
+      body: Column(
+        children: [
+          Container(
+            width:  MediaQuery.of(context).size.width,
+          ),
+          Container(
+            height: 200,
+            width: MediaQuery.of(context).size.width * 0.9,
+            decoration: BoxDecoration(
+                borderRadius: const BorderRadius.all(Radius.circular(20.0)),
+                color: kPrimaryRed,
+                // gradient: LinearGradient(
+                //   colors: [kPrimaryRed, kPrimaryYellow],
+                //   begin: Alignment.topCenter,
+                //   end: Alignment.bottomCenter,
+                // ),
+            ),
+            child: Center(
+              child: Text(
+                'Verify and Update Address',
+                style: TextStyle(
+                  color: Colors.white
+                ),
+              ),
+            ),
+          )
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){
+        onPressed: () {
           getRequiredPermissions();
-          Navigator.of(context).push(MaterialPageRoute(builder: (context) => ScanDocScreen()));
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => ScanDocScreen()));
         },
+        child: Icon(
+          Icons.add,
+        ),
+        backgroundColor: kPrimaryRed,
       ),
     );
   }
 }
-
