@@ -1,7 +1,10 @@
+import 'package:address/constants.dart';
+import 'package:address/screens/bottom_navigation.dart';
 import 'package:address/screens/home_screen.dart';
-import 'package:address/screens/location_screen.dart';
+import 'package:address/screens/otp_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:permission_handler/permission_handler.dart';
+import 'screens/addresses_screen.dart';
+import 'screens/scan_doc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,11 +16,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: kPrimaryRed
       ),
-      home: const HomeScreen(),
+      home: HomeScreen(),
     );
   }
 }

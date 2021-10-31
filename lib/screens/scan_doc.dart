@@ -1,8 +1,10 @@
+import 'package:address/screens/addresses_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobile_vision_2/flutter_mobile_vision_2.dart';
 
 class ScanDocScreen extends StatefulWidget {
-  const ScanDocScreen({Key? key}) : super(key: key);
+  String gps_address;
+  ScanDocScreen({Key? key, required this.gps_address}) : super(key: key);
 
   @override
   _ScanDocScreenState createState() => _ScanDocScreenState();
@@ -27,6 +29,7 @@ class _ScanDocScreenState extends State<ScanDocScreen> {
       );
       setState(() {
         _text = texts[0].value;
+        print("HERE IS THE LIST OF ALL THE DOC TEXT" + _text);
       });
     } on Exception {
       texts.add( OcrText('Failed to recognize text'));
@@ -53,7 +56,10 @@ class _ScanDocScreenState extends State<ScanDocScreen> {
             ),
             Center(
               child: ElevatedButton(
-                onPressed: _read,
+                onPressed: () async{
+                  await _read();
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => Addresses_Screen(doc_address: _text, GPS_address: widget.gps_address,)));
+                },
                 child: const Text('Scanning',
                   style: TextStyle(fontSize: 16),
                 ),
